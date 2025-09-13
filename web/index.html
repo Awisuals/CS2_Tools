@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cs2 utility Tool prototype</title>
+    <meta name="description" content="Short description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+     
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        // small runtime helper: flip no-js → js
+        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+    </script>
+    <header><h1>Cs2 Utility Tool Prototype</h1></header>
+    <main>
+        <div class="map-wrapper">
+            <!-- <svg id="map" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet"> -->
+            <div id="map" data-src="../maps/de_ancient_radar.svg" data-alt="map">
+
+            </div>
+            <script defer type="module">
+                import { inLineSVG } from './app.js';  
+                const map = document.getElementById('map');
+                document.addEventListener('DOMContentLoaded', () => {
+                inLineSVG(map.dataset.src, map);
+                });
+                
+            </script>
+            
+                
+            <!-- </svg> -->
+        </div>
+    <p>Content for this page.</p>
+    
+    <!-- <script src="app.js" defer type="module"></script> -->
+    </main>
+</body>
+</html>

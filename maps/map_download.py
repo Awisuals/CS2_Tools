@@ -4,7 +4,6 @@ Created: 05 09 2025
 
 Description: Helper script to download cs2 maps from refrag.
 '''
-from bs4 import BeautifulSoup
 from pathlib import Path
 import requests
 
@@ -31,7 +30,6 @@ def format_maps(map_txt):
     file_ext = "_radar.svg"
     for i, map in enumerate(maps):
         maps[i] = map + file_ext
-    # print(maps)
     return maps
 
 
@@ -45,8 +43,6 @@ def download_and_save_maps(map):
     
     url = "https://play.refrag.gg/maps/" + map
     r = requests.get(url)
-    # soup = BeautifulSoup(r.text, "xml")
-    # print(soup.prettify())
 
     with open(script_dir / map, "wb") as f:
         f.write(r.content)
