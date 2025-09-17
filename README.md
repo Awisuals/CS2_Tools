@@ -4,7 +4,7 @@ Grenade map and callouts utility tool.
 Clone with:
 
 ```bash
-git clone **Link**
+git clone <link-to-repo>
 ```
 
 Create python virtual environment to project folder (replace .venv with desired virtual environment name):
@@ -16,6 +16,5 @@ python -m venv .venv
 Install requirements (if powershell in same folder as requirements.txt):
 
 ```bash
-git clone <link-to-repo>
+pip install -r .\requirements.txt
 ```
-
